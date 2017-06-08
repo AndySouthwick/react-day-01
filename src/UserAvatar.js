@@ -1,19 +1,23 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import './UserAvatar.css'
 
 class UserAvatar extends Component {
   constructor () {
     super()
-    this.state = {
-      imageUrl: 'https://avatars2.githubusercontent.com/u/712023?v=3&s=460'
-    }
+    // state = {}
+    // props = {}
   }
 
   render() {
     return (
-      <img src={this.state.imageUrl} alt="" />
+      <img src={this.props.imageUrl} alt="" />
     )
   }
+}
+
+UserAvatar.propTypes = {
+  imageUrl: PropTypes.string.isRequired
 }
 
 export default UserAvatar
